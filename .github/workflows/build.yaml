@@ -69,5 +69,3 @@ jobs:
         run: poetry run flake8 . --count
       - name: Run tests
         run: poetry run pytest --cov=./ --cov-report=xml
-        with:
-          fail_ci_if_error: true
