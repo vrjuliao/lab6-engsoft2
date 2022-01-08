@@ -35,18 +35,23 @@ def test_non_real_roots():
     with pytest.raises(Exception) as _:
         assert calc_root(-1, 1, 0)
 
+
 def test_root_with_zeroed_a():
     with pytest.raises(Exception) as _:
         assert calc_root(-1, 0, 0)
 
+
 def test_unique_root():
     assert calc_root(0, 1, -2) == (1, 1)
+
 
 def test_positive_roots():
     assert calc_root(1, 1, -2) == (0.5, 1.5)
 
+
 def test_negative_roots():
-    assert calc_root(1, 1, 2) == (-1.5, -.5)
+    assert calc_root(1, 1, 2) == (-1.5, -0.5)
+
 
 def test_positive_and_negative_roots():
-    assert calc_root(4, 1, 1) == (-1.5, .5)
+    assert calc_root(4, 1, 1) == (-1.5, 0.5)
